@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  color: #323238
+}
+
+.page.dark {
+  background: black;
+  color: #FFF;
+}
+
+.page.dark .options>div>svg path{
+  fill: #FFF;
+}
+
+main.content {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 821px;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 321px;
+}
+
+.timer>div {
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  font-size: 127px;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.options>div {
+  border-radius: 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.climate {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 310px;
+}
+
+.climate>div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+
+  width: 138px;
+  height: 152px;
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+  background: #E1E1E6;
+}
+
+input.vol {
+  width: 80%;
+  height: 4px;
+  border-radius: 8px;
+}
+
+.dark .climate>div{
+  background: #29292E;
+}
+
+.climate>div.active,
+.climate>div:hover {
+  background: #02799D;
+}
+
+.climate>div.active>svg path,
+.climate>div:hover>svg path,
+.dark .climate>div>svg path {
+  fill: #FFF;
+}
+
+.theme {
+  display: block;
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  cursor: pointer;
+}
+
+.page.dark .darkTheme {
+  display: block;
+}
+
+.page.dark .light, .page .darkTheme {
+  display: none;
+}
+
+.page .options>div:hover>svg path,
+.page .theme:hover>svg path{
+  fill: #02799D;
+}
+
+@media (max-width: 780px) {
+  main.content {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .timer,
+  .climate {
+    margin: 1rem auto;
+  }
+}
